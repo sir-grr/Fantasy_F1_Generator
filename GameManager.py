@@ -264,12 +264,6 @@ print('what year would you like to end pulling reserve drivers from min 1950')
 pullYearTwo = int(input())
 
 activeDrivers,driverIds= dataGatherer.pullDriversFromYear(startYear,activeDrivers,driverIds)
-##THIS ADDS ADAM AS A JOKE
-adam = Driver('adam_ralston', 'Adam', 'Ralston', 100, 'noTeam')
-freeDrivers.append(adam)
-##THIS ADDS SEAN AS A JOKE
-sean = Driver('sean_crancher', 'Sean', 'Crancher', 100, 'noTeam')
-freeDrivers.append(sean)
 for i in range(pullYearOne,pullYearTwo-1,-1):
     freeDrivers,driverIds= dataGatherer.pullDriversFromYear(i,freeDrivers,driverIds)
 for driver in freeDrivers:
