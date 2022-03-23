@@ -185,8 +185,10 @@ def constructorsHireDrivers():
             cp = x+1
             roundswithoutdriver = 0
             while constructor.driverIds.__len__() < 2:
+                printConstructor(constructor)
                 for y,driver in enumerate(activeDrivers):
                     dp = y+1
+                    print(roundswithoutdriver)
                     if (int(cp*2) >= dp) or (roundswithoutdriver > 0):
                         if driver.constructorId == 'noTeam' :
                             driver,constructor = addDriverToConstructor(driver,constructor)
